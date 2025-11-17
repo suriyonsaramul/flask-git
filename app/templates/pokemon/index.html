@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="row">
+      <div class="col-6"></div>
+      <div class="col-6">
+        <a href="{{url_for('new_pokemon')}}" class="btn btn-outline-success float-end">
+          <i class="bi bi-plus-square-fill"></i> New Pokemon
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      {% for pokemon in pokemons %}
+          
+            <div class="col-md-4 mt-3 mb-3">
+              <div class="card">
+                <img src="{{pokemon.img_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </div>
+              </div>
+            </div>
+          
+      {% endfor %}
+      
+    </div>
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="card">
+      <div class="card-header">
+        <h2>Add New Pokemon</h2>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <div class="mb-3">
+            <label for="pokemon_name" class="form-label">Pokemon Name</label>
+            <input name="pokemon_name" type="text" class="form-control" id="pokemon_name">
+          </div>
+          <div class="mb-3">
+            <label for="pokemon_description" class="form-label">Pokemon Description</label>
+            <textarea name="pokemon_description" class="form-control" id="pokemon_description" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="pokemon_weight" class="form-label">Pokemon Weight</label>
+            <input name="pokemon_weight" type="number" step="any" class="form-control" id="pokemon_weight">
+          </div>
+          <div class="mb-3">
+            <label for="pokemon_height" class="form-label">Pokemon Height</label>
+            <input name="pokemon_height" type="number" step="any" class="form-control" id="pokemon_height">
+          </div>
+          <div class="mb-3">
+            <label for="pokemon_img_url" class="form-label">Image URL</label>
+            <input name="pokemon_img_url" type="text" class="form-control" id="pokemon_img_url">
+          </div>
+          <button type="submit" class="btn btn-outline-primary">
+            <i class="bi bi-plus-square-fill"></i>
+            Add Pokemon</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
