@@ -28,3 +28,8 @@ def new_pokemon():
     return redirect(url_for('pokemon'))
 
   return render_template('pokemon/new_pokemon.html', title='New Pokemon Page')
+
+@app.route('/pokemon/<int:id>/detail', methods=['GET', 'POST'])
+def pokemon_detail(id):
+  pokemon = db.session.get(Pokemon, id)
+  return render_template('pokemon/pokemon_detail.html', title='Pokemon Detail Page', pokemon=pokemon)
